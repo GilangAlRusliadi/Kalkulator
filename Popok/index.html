@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penghitung Keuntungan Popok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Penghitung Keuntungan Popok</h2>
+        <label for="hargaBall">Harga Popok per Ball (Rp):</label>
+        <input type="number" id="hargaBall" placeholder="Masukkan harga per ball">
+
+        <label for="jumlahPcs">Jumlah Pcs per Ball:</label>
+        <input type="number" id="jumlahPcs" value="60">
+
+        <label for="hargaJual">Harga Jual per Pcs (Rp):</label>
+        <input type="number" id="hargaJual" value="2000">
+
+        <button onclick="hitungKeuntungan()">Hitung</button>
+
+        <h3>Hasil:</h3>
+        <p>Harga Beli per Pcs: Rp <span id="hargaBeliPcs">0</span></p>
+        <p>Keuntungan per Ball: Rp <span id="keuntungan">0</span></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
