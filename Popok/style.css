@@ -1,25 +1,57 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
+    background-image: url('https://img166.imagetwist.com/i/45678/1mg8vr87flrk.jpg/255948253_vgi1444p02108.jpg');
+    /* background-size: auto 100vh; Tinggi penuh, lebar menyesuaikan */
+    background-position: center; /* Memusatkan gambar */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    background-attachment: fixed; /* Agar background tidak bergeser saat scroll */
     text-align: center;
     padding: 20px;
+    height: 100vh; /* Menyesuaikan tinggi layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (orientation: landscape) {
+    body {
+        background-size: auto 100vw;
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        background-size: auto 100vh;
+    }
 }
 
 .container {
-    background: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Hitam dengan transparansi 60% */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: inline-block;
     text-align: left;
+    color: white; /* Agar teks tetap terbaca */
+    max-width: 400px; /* Batasi lebar agar tidak terlalu besar */
 }
 
 input {
-    width: 100%;
-    padding: 8px;
+    width: 100%; /* Mengisi seluruh lebar container */
+    padding: 10px; /* Tambahkan padding agar lebih nyaman */
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Border putih transparan */
     border-radius: 5px;
+    box-sizing: border-box; /* Mencegah input melebihi container */
+    font-size: 16px; /* Agar teks lebih mudah dibaca */
+    background: rgba(255, 255, 255, 0.2); /* Warna latar belakang sedikit transparan */
+    color: white; /* Warna teks putih agar terbaca */
+    outline: none; /* Hilangkan garis bawaan saat fokus */
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Warna placeholder lebih lembut */
 }
 
 button {
