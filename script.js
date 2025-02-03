@@ -28,6 +28,21 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
     } catch (error) {
         console.error("Error fetching folder list:", error);
-        folderList.innerHTML = "<p>Gagal mengambil data folder</p>";
+        folderList.innerHTML = "";  // Clear any existing content
+        const link = document.createElement("a");
+        link.href = "Popok";
+        link.className = "icon";
+        link.target = "_self";
+
+        const img = document.createElement("img");
+        img.src = "https://cdn-icons-png.flaticon.com/256/10218/10218406.png";
+        img.alt = "Popok";
+
+        const span = document.createElement("span");
+        span.textContent = "Popok";
+
+        link.appendChild(img);
+        link.appendChild(span);
+        folderList.appendChild(link);  // Append the Popok folder link
     }
 });
