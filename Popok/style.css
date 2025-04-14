@@ -1,61 +1,78 @@
-/* https://img166.imagetwist.com/i/45678/tp4hhe7n7hwa.jpg/255948374_vgi1444p02147.jpg
-https://img166.imagetwist.com/i/45678/g575vptfphuo.jpg/255948381_vgi1444p02149.jpg
-https://img166.imagetwist.com/i/45678/1mg8vr87flrk.jpg/255948253_vgi1444p02108.jpg
-https://img166.imagetwist.com/i/45678/znhci201vcme.jpg/255948264_vgi1444p02110.jpg */
-
-/* https://n1.kemono.su/data/8c/ae/8cae4833142b5c656dde47d7304e40fea59d43b9f744c857c02ab3cdbeb2b1f5.jpg?f=03496.jpg
-https://n1.kemono.su/data/1e/36/1e360187911e4176cd37901006ad8121af7c7df564dd7c0bb02f12d8bf8e22a7.jpg?f=03500.jpg
-https://n3.kemono.su/data/5b/18/5b187748979731557ec50aea0e4508659da8acbeb649bce36c2458ae7c49e561.jpg?f=03501.jpg */
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    background-image: url('https://jjgirls.com/uncensored/cutebutts/aya-komatsu/0078_ayakomatsu_cd6a/aya-komatsu-3.jpg');
-    background-position: center; /* Memusatkan gambar */
-    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
-    background-attachment: fixed; /* Agar background tidak bergeser saat scroll */
+    font-family: cursive, sans-serif;
+    /* background: url('https://jjgirls.com/uncensored/cutebutts/aya-komatsu/0078_ayakomatsu_cd6a/aya-komatsu-3.jpg') center top / cover no-repeat fixed; */
+    
+    /* background: url('https://n1.kemono.su/data/8c/ae/8cae4833142b5c656dde47d7304e40fea59d43b9f744c857c02ab3cdbeb2b1f5.jpg?f=03496.jpg') center top / cover no-repeat fixed; */
+    /* background: url('https://n1.kemono.su/data/1e/36/1e360187911e4176cd37901006ad8121af7c7df564dd7c0bb02f12d8bf8e22a7.jpg?f=03500.jpg') center 20% / cover no-repeat fixed; */
+    /* background: url('https://n3.kemono.su/data/5b/18/5b187748979731557ec50aea0e4508659da8acbeb649bce36c2458ae7c49e561.jpg?f=03501.jpg') center 20% / cover no-repeat fixed; */
+
+    /* background: url('https://img166.imagetwist.com/i/45678/tp4hhe7n7hwa.jpg/255948374_vgi1444p02147.jpg') center 20% / cover no-repeat fixed; */
+    /* background: url('https://img166.imagetwist.com/i/45678/g575vptfphuo.jpg/255948381_vgi1444p02149.jpg') center 20% / cover no-repeat fixed; */
+    /* background: url('https://img166.imagetwist.com/i/45678/znhci201vcme.jpg/255948264_vgi1444p02110.jpg') center 20% / cover no-repeat fixed; */
+    /* background: url('https://img166.imagetwist.com/i/45678/1mg8vr87flrk.jpg/255948253_vgi1444p02108.jpg') center 20% / cover no-repeat fixed; */
+
+    /* background: url('https://gilbertclaus.pythonanywhere.com/static/images/nsfw/255948374_vgi1444p02147.jpg') center 20% / cover no-repeat fixed; */
+    /* background: url('hhttps://gilbertclaus.pythonanywhere.com/static/images/nsfw/255948381_vgi1444p02149.jpg') center 20% / cover no-repeat fixed; */
+    /* background: url('https://gilbertclaus.pythonanywhere.com/static/images/nsfw/255948264_vgi1444p02110.jpg') center 20% / cover no-repeat fixed; */
+    background: url('https://gilbertclaus.pythonanywhere.com/static/images/nsfw/255948253_vgi1444p02108.jpg') center / cover no-repeat fixed;
+
+    /* background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
     text-align: center;
-    padding: 20px;
-    height: 100vh; /* Menyesuaikan tinggi layar */
+    /* padding: 20px; */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 @media (orientation: landscape) {
     body {
-        background-size: auto 100vw;
+        background-position: center 25%;
     }
 }
 
 @media (orientation: portrait) {
     body {
-        background-size: auto 100vh;
+        background-position: center top;
     }
 }
 
+.overlay {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10%;
+}
+
 .container {
-    background-color: rgba(0, 0, 0, 0.6); /* Hitam dengan transparansi 60% */
+    background: transparent;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
     display: inline-block;
     text-align: left;
-    color: white; /* Agar teks tetap terbaca */
-    max-width: 400px; /* Batasi lebar agar tidak terlalu besar */
+    color: white;
+    max-width: 400px;
 }
 
 input {
-    width: 100%; /* Mengisi seluruh lebar container */
-    padding: 10px; /* Tambahkan padding agar lebih nyaman */
+    width: 100%;
+    padding: 10px;
     margin: 5px 0;
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Border putih transparan */
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 5px;
-    box-sizing: border-box; /* Mencegah input melebihi container */
-    font-size: 16px; /* Agar teks lebih mudah dibaca */
-    background: rgba(255, 255, 255, 0.2); /* Warna latar belakang sedikit transparan */
-    color: white; /* Warna teks putih agar terbaca */
-    outline: none; /* Hilangkan garis bawaan saat fokus */
+    box-sizing: border-box;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
 }
 
 input::placeholder {
@@ -66,7 +83,7 @@ button {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background: #28a745;
+    background: #66ff33;
     color: white;
     border: none;
     border-radius: 5px;
@@ -74,9 +91,21 @@ button {
 }
 
 button:hover {
-    background: #218838;
+    background: #3366ff;
 }
 
 h3 {
     margin-top: 20px;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: -1;
 }

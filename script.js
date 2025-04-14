@@ -1,48 +1,27 @@
-document.addEventListener("DOMContentLoaded", async function() {
+document.addEventListener("DOMContentLoaded", function () {
     const folderList = document.getElementById("folder-list");
 
-    try {
-        const response = await fetch("list.php");
-        const folders = await response.json();
+    (async () => {
+        try {
+            folderList.innerHTML = ""; // Kosongkan konten lama
 
-        if (folders.length === 0) {
-            folderList.innerHTML = "<p>Tidak ada folder</p>";
-        } else {
-            folders.forEach(folder => {
-                const link = document.createElement("a");
-                link.href = folder;
-                link.className = "icon";
-                link.target = "_self";
+            const link = document.createElement("a");
+            link.href = "Popok";
+            link.className = "icon";
+            link.target = "_self";
 
-                const img = document.createElement("img");
-                img.src = "https://cdn-icons-png.flaticon.com/256/10218/10218406.png";
-                img.alt = "Folder Icon";
+            const img = document.createElement("img");
+            img.src = "https://cdn-icons-png.flaticon.com/256/10218/10218406.png";
+            img.alt = "Popok";
 
-                const span = document.createElement("span");
-                span.textContent = folder;
+            const span = document.createElement("span");
+            span.textContent = "Popok";
 
-                link.appendChild(img);
-                link.appendChild(span);
-                folderList.appendChild(link);
-            });
+            link.appendChild(img);
+            link.appendChild(span);
+            folderList.appendChild(link);
+        } catch (error) {
+            console.error("Terjadi kesalahan saat membuat folder:", error);
         }
-    } catch (error) {
-        console.error("Error fetching folder list:", error);
-        folderList.innerHTML = "";  // Clear any existing content
-        const link = document.createElement("a");
-        link.href = "Popok";
-        link.className = "icon";
-        link.target = "_self";
-
-        const img = document.createElement("img");
-        img.src = "https://cdn-icons-png.flaticon.com/256/10218/10218406.png";
-        img.alt = "Popok";
-
-        const span = document.createElement("span");
-        span.textContent = "Popok";
-
-        link.appendChild(img);
-        link.appendChild(span);
-        folderList.appendChild(link);  // Append the Popok folder link
-    }
+    })();
 });

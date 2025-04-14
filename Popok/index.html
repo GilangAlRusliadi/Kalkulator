@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penghitung Keuntungan Popok</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://gilbertclaus.pythonanywhere.com/static/images/icon/Ark Re Code.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://gilbertclaus.pythonanywhere.com/templates/Kalkulator/Popok/style.css">
+    <!-- <link rel="stylesheet" href="https://gilbertclaus.pythonanywhere.com/static/css/random-background.css"> -->
 </head>
 <body>
+    <div class="overlay">
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="#" type="video/mp4">
+    </video>
+        
+    <!-- Tombol di pojok kanan atas -->
+    <button class="theme-toggle" data-tooltip="Ganti background" onclick="LoadVideo()">
+        <img src="https://gilbertclaus.pythonanywhere.com/static/images/icon/Ark Re Code.webp" alt="Ganti Background" />
+    </button>
+
     <div class="container">
         <h2>Penghitung Keuntungan Popok</h2>
         <label for="hargaBall">Harga Popok per Ball (Rp):</label>
@@ -23,8 +35,10 @@
         <h3>Hasil:</h3>
         <p>Harga Beli per Pcs: Rp <span id="hargaBeliPcs">0</span></p>
         <p>Keuntungan per Ball: Rp <span id="keuntungan">0</span></p>
+        <!-- <button onclick="LoadVideo()">Load Video</button> -->
     </div>
-    
-    <script src="script.js"></script>
+    </div>
+    <script src="https://gilbertclaus.pythonanywhere.com/templates/Kalkulator/Popok/script.js"></script>
+    <!-- <script src="https://gilbertclaus.pythonanywhere.com/templates/Kalkulator/Popok/random.js"></script> -->
 </body>
 </html>

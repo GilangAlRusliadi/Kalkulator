@@ -25,3 +25,35 @@ function hitungKeuntungan() {
     document.getElementById("hargaBeliPcs").innerText = hargaBeliPcs.toFixed(2);
     document.getElementById("keuntungan").innerText = keuntunganPerBall.toFixed(2);
 }
+
+
+async function LoadVideo() {
+    try {
+      const response = await fetch("https://gilbertclaus.pythonanywhere.com/list-videos");
+      const data = await response.json();
+  
+      // Cari entri yang mengandung "iStripper" di key name
+      const entry = Object.entries(data).find(([name, link]) =>
+        name.includes("iStripper")
+      );
+  
+      if (!entry) {
+        alert("Video iStripper tidak ditemukan.");
+        return;
+      }
+  
+      const [, videoUrl] = entry;
+  
+      const video = document.getElementById("bg-video");
+      const source = video.querySelector("source");
+      
+      source.src = videoUrl;
+      video.load();
+      video.play();
+  
+      console.log("Video loaded:", videoUrl);
+    } catch (error) {
+      console.error("Gagal load video:", error);
+      alert("Terjadi kesalahan saat mengambil data video.");
+    }
+}
