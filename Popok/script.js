@@ -35,7 +35,7 @@ async function LoadVideo() {
 
     // Ambil semua entry yang cocok
     const entries = Object.entries(data).filter(([name, link]) =>
-      name.includes("iStripper") && link.includes("Dil")
+      name.includes("iStripper")
     );
 
     if (entries.length === 0) {
