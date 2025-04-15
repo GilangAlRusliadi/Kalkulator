@@ -66,11 +66,8 @@ async function LoadVideo() {
     // video.style.left = "50%";   
     // video.style.top = videoUrl.includes("Dance") ? "50%" : "";
     // video.style.bottom = videoUrl.includes("Dance") ? "" : "0";
-    if (videoUrl.includes("Dance")) {
-      video.style.objectPosition = "center center";
-    } else {
-      video.style.objectPosition = "center bottom";
-    }
+    video.style.objectPosition = videoUrl.includes("Dance")
+    ? "center center" : "center bottom";
 
     // Ganti source video
     source.src = videoUrl;
