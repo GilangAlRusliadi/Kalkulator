@@ -62,7 +62,8 @@ async function LoadVideo() {
     const video = document.getElementById("bg-video");
     const source = video.querySelector("source");
 
-    // Set style dulu      
+    // Set style dulu
+    video.style.left = "50%";   
     video.style.top = videoUrl.includes("Dance") ? "50%" : "";
     video.style.bottom = videoUrl.includes("Dance") ? "" : "0";
 
