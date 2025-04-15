@@ -63,9 +63,14 @@ async function LoadVideo() {
     const source = video.querySelector("source");
 
     // Set style dulu
-    video.style.left = "50%";   
-    video.style.top = videoUrl.includes("Dance") ? "50%" : "";
-    video.style.bottom = videoUrl.includes("Dance") ? "" : "0";
+    // video.style.left = "50%";   
+    // video.style.top = videoUrl.includes("Dance") ? "50%" : "";
+    // video.style.bottom = videoUrl.includes("Dance") ? "" : "0";
+    if (videoUrl.includes("Dance")) {
+      video.style.objectPosition = "center center";
+    } else {
+      video.style.objectPosition = "center bottom";
+    }
 
     // Ganti source video
     source.src = videoUrl;
